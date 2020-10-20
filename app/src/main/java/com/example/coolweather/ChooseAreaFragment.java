@@ -71,7 +71,7 @@ public class ChooseAreaFragment extends Fragment {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 if(currentLevel==LEVEL_PROVINCE)
                 {
-                    selectedProvince=provinceList.get(i);
+                selectedProvince=provinceList.get(i);
                     queryCities();
                 }else if(currentLevel==LEVEL_CITY){
                     selectedCity=cityList.get(i);
