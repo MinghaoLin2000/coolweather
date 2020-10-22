@@ -2,6 +2,7 @@ package com.example.coolweather;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -158,7 +159,8 @@ public class ChooseAreaFragment extends Fragment {
         {
             int provinceCode=selectedProvince.getProvinceCode();
             int cityCode=selectedCity.getCityCode();
-            String address="http:guolin/tech/api/china/"+provinceCode+"/"+cityCode;
+            String address="http:guolin.tech/api/china/"+provinceCode+"/"+cityCode;
+            Log.d("YenKoc:",address);
             queryFromServer(address,"country");
         }
     }
@@ -208,6 +210,7 @@ public class ChooseAreaFragment extends Fragment {
                         public void run() {
                             //关闭进度条
                             progressBar.setVisibility(View.GONE);
+                            Log.d("Y1", "run: ");
                             if("province".equals(type))
                             {
                                 queryProvinces();
