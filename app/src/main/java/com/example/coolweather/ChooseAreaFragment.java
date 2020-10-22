@@ -143,7 +143,7 @@ public class ChooseAreaFragment extends Fragment {
     {
         titleText.setText(selectedCity.getCityName());
         backButton.setVisibility(View.VISIBLE);
-        countryList=LitePal.where("city = ?",String.valueOf(selectedCity.getId())).find(Country.class); //查询数据库中县表中的cityid为当前选中city的id，
+        countryList=LitePal.where("cityid = ?",String.valueOf(selectedCity.getId())).find(Country.class); //查询数据库中县表中的cityid为当前选中city的id，
         if(countryList.size()>0)
         {
             dataList.clear();
@@ -158,7 +158,7 @@ public class ChooseAreaFragment extends Fragment {
         {
             int provinceCode=selectedProvince.getProvinceCode();
             int cityCode=selectedCity.getCityCode();
-            String address="http:guolin/tech/api/china/"+provinceCode+cityCode;
+            String address="http:guolin/tech/api/china/"+provinceCode+"/"+cityCode;
             queryFromServer(address,"country");
         }
     }
