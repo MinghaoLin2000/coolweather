@@ -20,6 +20,7 @@ import androidx.fragment.app.Fragment;
 import com.example.coolweather.db.City;
 import com.example.coolweather.db.Country;
 import com.example.coolweather.db.Province;
+import com.example.coolweather.gson.Weather;
 import com.example.coolweather.util.HttpUtil;
 import com.example.coolweather.util.Utility;
 
